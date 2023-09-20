@@ -9,7 +9,7 @@ public class AssociadoController {
     
     @GetMapping("")
     public String mensagem(){
-        return "Hello World, pronto para codar, pronto para aprender!!!";
+        return "Hello World, pronto para codar!!!";
     }
 
 }
