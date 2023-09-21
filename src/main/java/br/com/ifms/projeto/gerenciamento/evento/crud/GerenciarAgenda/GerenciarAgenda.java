@@ -1,4 +1,4 @@
-package br.com.ifms.projeto.gerenciamento.evento.crud.GerenciarAgenda
+package br.com.ifms.projeto.gerenciamento.evento.crud.GerenciarAgenda;
 
 import java.util.Date;
 
