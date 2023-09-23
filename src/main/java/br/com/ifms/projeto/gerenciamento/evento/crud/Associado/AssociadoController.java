@@ -16,6 +16,7 @@ public class AssociadoController {
     }
 
     //Exemplo de curso
+    
     @GetMapping("/boasVindas/{nome}")
     public String boasVindas(@PathVariable String nome){
         return "Seja bem Vindo Associado(a) " + nome + " !!! ";
