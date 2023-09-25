@@ -1,6 +1,8 @@
 package br.com.ifms.projeto.gerenciamento.evento.crud.Associado;
 
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,11 +18,25 @@ public class Associado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
-
     private String cpf;
     private String nome;
     private String quadraLote;
+    private LocalDate dataNascimento;
+	private String telefone;
+	private String email;
+	private String endereco;
+
+    public Associado(Long id, String nome, String CPF, LocalDate dataNascimento, String telefone, String email,
+			String endereco) {
+		this.id = id;
+		this.nome = nome;
+		this.cpf = CPF;
+		this.dataNascimento = dataNascimento;
+		this.telefone = telefone;
+		this.email = email;
+		this.endereco = endereco;
+	}
+
 
     // Get e Set
     public Long getId() {
@@ -53,6 +69,45 @@ public class Associado {
 
     public void setQuadraLote(String quadraLote) {
         this.quadraLote = quadraLote;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+
+    public String getEmail() {
+        return email;
+    }
+
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
 }
