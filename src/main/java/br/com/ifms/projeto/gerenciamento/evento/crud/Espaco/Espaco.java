@@ -1,12 +1,26 @@
 package br.com.ifms.projeto.gerenciamento.evento.crud.Espaco;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "espacos")
 public class Espaco {
     
+    
+    private Long id;
     private String salao;
     private Double valor;
     private String quiosque;
     private String quadraEsportiva;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getSalao() {
         return salao;

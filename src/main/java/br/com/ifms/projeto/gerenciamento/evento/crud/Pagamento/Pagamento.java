@@ -1,9 +1,25 @@
 package br.com.ifms.projeto.gerenciamento.evento.crud.Pagamento;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "pagamentos")
+
 public class Pagamento {
+
+    private Long id;
     private String cartao;
     private String boleto;
     private String pix;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getCartao() {
         return cartao;
