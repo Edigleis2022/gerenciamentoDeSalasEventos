@@ -15,19 +15,20 @@ public class Associado {
     // Atributo
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int condigo;
+    private Long id;
+    
+
     private String cpf;
     private String nome;
     private String quadraLote;
 
     // Get e Set
-    public int getCondigo() {
-        return condigo;
+    public Long getId() {
+        return id;
     }
 
-    
-    public void setCondigo(int condigo) {
-        this.condigo = condigo;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getCpf() {
