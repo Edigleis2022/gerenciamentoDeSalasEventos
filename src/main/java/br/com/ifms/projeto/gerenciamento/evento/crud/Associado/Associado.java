@@ -1,6 +1,7 @@
 package br.com.ifms.projeto.gerenciamento.evento.crud.Associado;
 
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
@@ -12,9 +13,10 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "associados")
-public class Associado {
+public class Associado implements Serializable{
+    private static final long serialVersionUID = 1l;
 
-    // Atributo
+    // Atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
