@@ -26,9 +26,9 @@ public interface AssociadosRepositories extends JpaRepository<Associado, Long> {
 
     /*
      * Método para exibi o nome e o lote e Id
-     * 
+     * Usa com o List quando vai retornar muitos registro
      */
 
-    Associado findById(long id);
+    Associado findByid(long id);
 
 }

@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.yaml.snakeyaml.events.Event.ID;
 
 import br.com.ifms.projeto.gerenciamento.evento.crud.Repositories.AssociadosRepositories;
+import jakarta.persistence.Id;
 
 @RestController
 public class AssociadoController {
@@ -32,6 +34,11 @@ public class AssociadoController {
     @GetMapping("/api")
     public List<Associado> selecionar(){
         return acao.findAll();
+    }
+
+    @GetMapping("/api/{id}")
+    public Associado selecionarPeloId(@PathVariable Long id){
+        return acao.findByid(id);
     }
 
     @GetMapping("")
