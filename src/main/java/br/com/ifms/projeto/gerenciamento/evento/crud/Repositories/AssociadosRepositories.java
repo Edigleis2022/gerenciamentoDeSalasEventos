@@ -29,6 +29,6 @@ public interface AssociadosRepositories extends JpaRepository<Associado, Long> {
      * 
      */
 
-    
+    Associado findById(long id);
 
 }
