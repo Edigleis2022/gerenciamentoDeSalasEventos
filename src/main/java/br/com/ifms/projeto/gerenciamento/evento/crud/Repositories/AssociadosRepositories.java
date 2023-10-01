@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import br.com.ifms.projeto.gerenciamento.evento.crud.Associado.Associado;
 
 /**
- * Criamos o repositorio que é a camada de persistência onde podemos efetuar açês
+ * Criamos o repositorio que é a camada de persistência onde podemos efetuar ações
  * de banco de dados como: cadastrar,selecionar, alterar e excluir por exemplo.
  *
  */
@@ -23,5 +23,12 @@ public interface AssociadosRepositories extends JpaRepository<Associado, Long> {
      */
 
     List<Associado> findAll();
+
+    /*
+     * Método para exibi o nome e o lote e Id
+     * 
+     */
+
+    
 
 }

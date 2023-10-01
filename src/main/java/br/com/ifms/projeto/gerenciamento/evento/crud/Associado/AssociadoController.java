@@ -16,7 +16,11 @@ import br.com.ifms.projeto.gerenciamento.evento.crud.Repositories.AssociadosRepo
 public class AssociadoController {
     
     //Exemplo de curso
-
+    /*
+     * O objeto criado ACAO chama os metodos
+     * 
+     * 
+     */
     @Autowired
     private AssociadosRepositories acao;
 

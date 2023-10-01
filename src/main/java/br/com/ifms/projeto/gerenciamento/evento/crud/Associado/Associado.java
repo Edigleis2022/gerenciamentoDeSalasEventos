@@ -27,7 +27,7 @@ public class Associado implements Serializable{
 	private String email;
 	private String endereco;
 
- public Associado(Long id, String nome, String CPF, LocalDate dataNascimento, String telefone, String email,
+ /*public Associado(Long id, String nome, String CPF, LocalDate dataNascimento, String telefone, String email,
 			String endereco) {
 		this.id = id;
 		this.nome = nome;
@@ -36,7 +36,7 @@ public class Associado implements Serializable{
 		this.telefone = telefone;
 		this.email = email;
 		this.endereco = endereco;
-	}
+	}*/
 
 
     // Get e Set
