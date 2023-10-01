@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,14 +32,22 @@ public class AssociadoController {
         return acao.save(obj);
     }
 
+    /*Este method lista os dados do Banco de Dados*/
     @GetMapping("/api")
     public List<Associado> selecionar(){
         return acao.findAll();
     }
 
+    /*Este metodo filtra os dados do Banco de dados */
     @GetMapping("/api/{id}")
     public Associado selecionarPeloId(@PathVariable Long id){
         return acao.findByid(id);
+    }
+
+    /* Este metodo retorna um objeto  */
+    @PutMapping("/api")
+    public Associado editar(@RequestBody Associado obj){
+        return acao.save(obj);
     }
 
     @GetMapping("")
