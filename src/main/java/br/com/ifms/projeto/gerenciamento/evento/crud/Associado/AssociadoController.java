@@ -3,7 +3,7 @@ package br.com.ifms.projeto.gerenciamento.evento.crud.Associado;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,6 +27,9 @@ public class AssociadoController {
     @Autowired
     private AssociadosRepositories acao;
 
+    /*
+     * O SAVE tem dua funções cadastrar ou editar
+     */
     @PostMapping("/api")
     public Associado cadastrar(@RequestBody Associado obj){
         return acao.save(obj);
@@ -44,10 +47,25 @@ public class AssociadoController {
         return acao.findByid(id);
     }
 
-    /* Este metodo retorna um objeto  */
+    /* Este metodo retorna um objeto editado.
+     * 
+    */
     @PutMapping("/api")
     public Associado editar(@RequestBody Associado obj){
         return acao.save(obj);
+    }
+
+    @DeleteMapping("/api/{id}")
+    public void remover(@PathVariable Long id){
+        Associado obj = selecionarPeloId(id);
+
+        acao.delete(obj);
+    }
+
+    /**Funçao COUNT retorna a quantidade de registro em uma tabela */
+    @GetMapping("/api/contador")
+    public Long contador(){
+        return acao.count();
     }
 
     @GetMapping("")
