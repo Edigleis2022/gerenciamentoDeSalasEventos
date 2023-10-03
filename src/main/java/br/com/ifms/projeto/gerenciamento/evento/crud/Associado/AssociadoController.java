@@ -30,7 +30,7 @@ public class AssociadoController {
     /*
      * O SAVE tem dua funções cadastrar ou editar
      */
-    @PostMapping("/api")
+    @PostMapping("/api")//cadastra no banco de dados
     public Associado cadastrar(@RequestBody Associado obj){
         return acao.save(obj);
     }
