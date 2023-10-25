@@ -73,11 +73,19 @@ public class AssociadoController {
         return "Hello World, pronto para codar!!!";
     }
     
+    /* Pegar uma informação passada 
+     * na Url e trata como uma variavel.
+     * 
+     */
     @GetMapping("/boasVindas/{nome}")
     public String boasVindas(@PathVariable String nome){
         return "Seja bem Vindo Associado(a) " + nome + " !!! ";
     }
 
+    /*
+     * Model 
+     * 
+     */
     @PostMapping("/associado")
     public Associado associado(@RequestBody Associado socio){
         return socio;
