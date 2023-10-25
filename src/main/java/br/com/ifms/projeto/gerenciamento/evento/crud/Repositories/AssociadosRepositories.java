@@ -17,9 +17,9 @@ import br.com.ifms.projeto.gerenciamento.evento.crud.Associado.Associado;
 public interface AssociadosRepositories extends JpaRepository<Associado, Long> {
     
     /*
-     * List tras uma lista requisitada
-     * findAll é um comando nativo que quando chamdo retorna
-     *  uma lista chamada Associado.
+     * List/lista trás uma lista requisitada
+     * findAll é um comando nativo que quando chamado retorna
+     * uma lista chamada Associado.
      */
 
     List<Associado> findAll();

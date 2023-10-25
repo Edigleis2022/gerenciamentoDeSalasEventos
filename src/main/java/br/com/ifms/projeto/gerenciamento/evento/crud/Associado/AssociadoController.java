@@ -21,7 +21,8 @@ public class AssociadoController {
     //Exemplo de curso
     /*
      * O objeto criado ACAO chama os metodos
-     * 
+     * Annotecion autowired é um atalho para ter acesso a determinados 
+     * métodos
      * 
      */
     @Autowired
@@ -88,7 +89,7 @@ public class AssociadoController {
     }
 
     /*
-     * Model 
+     * Model/modelo
      * 
      */
     @PostMapping("/associado")

@@ -10,13 +10,19 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+/*Primeira annotecion
+ * Entity cria a tabela no bancos de dados
+ * 
+ */
 @Entity
 @Table(name = "associados")
 public class Associado implements Serializable{
     private static final long serialVersionUID = 1l;
 
     // Atributos
+    // O Id é responsavel pela criação da primary ky
     @Id
+    //Essa annotecion 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String cpf;
