@@ -29,6 +29,7 @@ public class AssociadoController {
 
     /*
      * O SAVE tem dua funções cadastrar ou editar
+     * Efetuar um INSERT
      */
     @PostMapping("/api")//cadastra no banco de dados
     public Associado cadastrar(@RequestBody Associado obj){
@@ -68,6 +69,10 @@ public class AssociadoController {
         return acao.count();
     }
 
+    /*
+     * Inicio dos Métodos
+     * 
+     */
     @GetMapping("")
     public String mensagem(){
         return "Hello World, pronto para codar!!!";
