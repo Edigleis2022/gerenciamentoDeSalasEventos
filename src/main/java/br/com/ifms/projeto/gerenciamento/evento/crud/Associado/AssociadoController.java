@@ -21,7 +21,8 @@ public class AssociadoController {
     //Exemplo de curso
     /*
      * O objeto criado ACAO chama os metodos
-     * 
+     * Annotecion autowired é um atalho para ter acesso a determinados 
+     * métodos
      * 
      */
     @Autowired
@@ -29,6 +30,7 @@ public class AssociadoController {
 
     /*
      * O SAVE tem dua funções cadastrar ou editar
+     * Efetuar um INSERT
      */
     @PostMapping("/api")//cadastra no banco de dados
     public Associado cadastrar(@RequestBody Associado obj){
@@ -68,6 +70,10 @@ public class AssociadoController {
         return acao.count();
     }
 
+    /*
+     * Inicio dos Métodos
+     * 
+     */
     @GetMapping("")
     public String mensagem(){
         return "Hello World, pronto para codar!!!";
@@ -83,7 +89,7 @@ public class AssociadoController {
     }
 
     /*
-     * Model 
+     * Model/modelo
      * 
      */
     @PostMapping("/associado")
