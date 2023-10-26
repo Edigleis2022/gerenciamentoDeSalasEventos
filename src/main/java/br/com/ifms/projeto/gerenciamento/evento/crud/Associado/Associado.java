@@ -10,6 +10,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+/*
+ * O Entity espicifica a criação da tabela
+ * 
+ */
 @Entity
 @Table(name = "associados")
 public class Associado implements Serializable{
