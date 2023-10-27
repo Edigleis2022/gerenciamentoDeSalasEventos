@@ -43,7 +43,11 @@ public class AssociadoController {
         return acao.findAll();
     }
 
-    /*Este metodo filtra os dados do Banco de dados */
+    /* Este metodo filtra os dados do Banco de dados 
+     * da tabela associado.
+     * finByidEle pega pela caracteristica da classe
+     * 
+    */
     @GetMapping("/api/{id}")
     public Associado selecionarPeloId(@PathVariable Long id){
         return acao.findByid(id);
