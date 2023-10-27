@@ -14,7 +14,6 @@ public class Espaco {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String salao;
-    private Double valor;
     private String quiosque;
     private String quadraEsportiva;
 
@@ -32,14 +31,6 @@ public class Espaco {
 
     public void setSalao(String salao) {
         this.salao = salao;
-    }
-
-    public Double getValor() {
-        return valor;
-    }
-
-    public void setValor(Double valor) {
-        this.valor = valor;
     }
 
     public String getQuiosque() {
