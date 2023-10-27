@@ -33,14 +33,6 @@ public class Espaco {
         this.salao = salao;
     }
 
-    public Double getValor() {
-        return valor;
-    }
-
-    public void setValor(Double valor) {
-        this.valor = valor;
-    }
-
     public String getQuiosque() {
         return quiosque;
     }
