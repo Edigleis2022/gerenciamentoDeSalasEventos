@@ -14,7 +14,6 @@ public class Espaco {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String salao;
-    private Double valor;
     private String quiosque;
     private String quadraEsportiva;
 
