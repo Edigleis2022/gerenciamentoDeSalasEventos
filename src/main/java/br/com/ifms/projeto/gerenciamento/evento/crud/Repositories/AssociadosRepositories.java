@@ -8,9 +8,9 @@ import org.springframework.stereotype.Repository;
 import br.com.ifms.projeto.gerenciamento.evento.crud.Associado.Associado;
 
 /**
- * Criamos o repositorio que é a camada de persistência onde podemos efetuar ações
+ * Repositorio é a camada de persistência onde pode efetuar ações
  * de banco de dados como: cadastrar,selecionar, alterar e excluir por exemplo.
- *
+ *Aquei se faz funções de SQL
  */
 
 @Repository
