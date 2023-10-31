@@ -30,7 +30,9 @@ public interface AssociadosRepositories extends JpaRepository<Associado, Long> {
      * findByid Pega pela caracteristica
      */
 
-
     Associado findByid(long id);
+
+    
+    list<Associado> findByOrderBy;
 
 }
