@@ -68,7 +68,10 @@ public class AssociadoController {
         acao.delete(obj);
     }
 
-    /**Funçao COUNT retorna a quantidade de registro em uma tabela */
+    /*
+    *Long é o tipo de informação que o metodo COUT vai retornar
+    *Funçao COUNT retorna a 
+    quantidade de registro em uma tabela */
     @GetMapping("/api/contador")
     public Long contador(){
         return acao.count();
