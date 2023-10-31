@@ -32,7 +32,10 @@ public interface AssociadosRepositories extends JpaRepository<Associado, Long> {
 
     Associado findByid(long id);
 
-
+    /*
+     * O dados começa a contar de fomar descrecente
+     * 
+     */
     List<Associado> findByOrderByNome();
 
 }
