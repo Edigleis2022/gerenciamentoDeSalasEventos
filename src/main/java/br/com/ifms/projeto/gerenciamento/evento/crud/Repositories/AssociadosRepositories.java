@@ -32,7 +32,7 @@ public interface AssociadosRepositories extends JpaRepository<Associado, Long> {
 
     Associado findByid(long id);
 
-    
-    list<Associado> findByOrderBy;
+
+    List<Associado> findByOrderByNome();
 
 }
