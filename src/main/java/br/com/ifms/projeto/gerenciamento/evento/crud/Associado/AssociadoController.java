@@ -99,6 +99,18 @@ public class AssociadoController {
         return acao.findByNomeContaining("é");
     }
 
+    /*Metodo para lista os nome com que inicia com a letra a e finaliza 
+     * com a letra a.
+     */
+    @GetMapping("/api/iniciaCom")
+    public List<Associado> iniciarCom(){
+        return acao.findByNomeStartsWith("A");
+    }
+    @GetMapping("/api/terminaCom")
+    public List<Associado> terminarCom(){
+        return acao.findByNomeEndsWith("E");
+    }
+
     /*
      * Inicio dos Métodos
      * 

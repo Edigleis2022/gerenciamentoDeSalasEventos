@@ -50,4 +50,10 @@ public interface AssociadosRepositories extends JpaRepository<Associado, Long> {
 
     /*Esta função é parecida com o Link do banco de dados  */
     List<Associado> findByNomeContaining(String termo);
+
+    /*Todo os nomes que inicia com serão listados */
+    List<Associado> findByNomeStartsWith(String termo);
+
+    /*Todos os nomes que finalizam com a letra a serão listados */
+    List<Associado> findByNomeEndsWith(String termo);
 }
