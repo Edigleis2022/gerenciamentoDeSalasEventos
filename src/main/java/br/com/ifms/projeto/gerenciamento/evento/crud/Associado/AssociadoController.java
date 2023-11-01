@@ -92,7 +92,7 @@ public class AssociadoController {
     /*Metodo que lista pelo nome e ordena pelo cpf */
     @GetMapping("/api/ordenarNomes2")
     public List<Associado> ordenarNomes2(){
-        return acao.findByNomeOrderByCpfDesc("Edigleis");
+        return acao.findByNomeOrderByCpfAsc("Edilgies Pereira");
     }
 
     /*

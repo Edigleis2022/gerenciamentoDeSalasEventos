@@ -46,6 +46,8 @@ public interface AssociadosRepositories extends JpaRepository<Associado, Long> {
 
     /* Lista o objeto model pelo nome depois filtrar pelo cpf */
 
-    List<Associado> findByNomeOrderByCpfDesc(String nome);
+    List<Associado> findByNomeOrderByCpfAsc(String nome);
+
+    /*Esta função é parecida com o Link do banco de dados  */
 
 }
