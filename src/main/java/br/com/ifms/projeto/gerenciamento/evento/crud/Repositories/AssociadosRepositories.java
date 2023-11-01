@@ -49,5 +49,5 @@ public interface AssociadosRepositories extends JpaRepository<Associado, Long> {
     List<Associado> findByNomeOrderByCpfAsc(String nome);
 
     /*Esta função é parecida com o Link do banco de dados  */
-
+    List<Associado> findByNomeContaining(String termo);
 }

@@ -95,6 +95,12 @@ public class AssociadoController {
         return acao.findByNomeOrderByCpfAsc("Edilgies Pereira");
     }
 
+    /*Metodo para listar o nome pela letra */
+    @GetMapping("/api/nomeContem")
+    public List<Associado> nomeContem(){
+        return acao.findByNomeContaining("e");
+    }
+
     /*
      * Inicio dos Métodos
      * 
