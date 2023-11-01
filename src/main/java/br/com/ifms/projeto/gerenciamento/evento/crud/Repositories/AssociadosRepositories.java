@@ -38,4 +38,7 @@ public interface AssociadosRepositories extends JpaRepository<Associado, Long> {
      */
     List<Associado> findByOrderByNome();
 
+    
+    List<Associado> findByOrderByNomeDesc();
+
 }

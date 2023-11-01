@@ -25,10 +25,10 @@ public class Associado implements Serializable{
     //Essa annotecion 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String cpf;
     private String nome;
-    private String quadraLote;
+    private String cpf;
     private LocalDate dataNascimento;
+    private String quadraLote;
 	private String telefone;
 	private String email;
 	private String endereco;

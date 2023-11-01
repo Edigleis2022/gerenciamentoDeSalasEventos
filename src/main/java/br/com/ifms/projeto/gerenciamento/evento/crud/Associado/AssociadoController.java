@@ -46,8 +46,7 @@ public class AssociadoController {
     /* Este metodo filtra os dados do Banco de dados 
      * da tabela associado.
      * finByidEle pega pela caracteristica da classe
-     * 
-    */
+     */
     @GetMapping("/api/{id}")
     public Associado selecionarPeloId(@PathVariable Long id){
         return acao.findByid(id);
@@ -77,7 +76,17 @@ public class AssociadoController {
         return acao.count();
     }
 
-    
+    /** Metodo cresente */
+    @GetMapping("/api/ordenarNomes")
+    public List<Associado> ordenarNomes(){
+        return acao.findByOrderByNome();
+    }
+
+    /** Metodo decresente */
+    @GetMapping("/api/ordenarNomesDe")
+    public List<Associado> ordenarNomesDesc(){
+        return acao.findByOrderByNomeDesc();
+    }
 
     /*
      * Inicio dos Métodos
