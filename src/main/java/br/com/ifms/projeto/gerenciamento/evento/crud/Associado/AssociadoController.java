@@ -1,8 +1,6 @@
 package br.com.ifms.projeto.gerenciamento.evento.crud.Associado;
 
 import java.util.List;
-
-import org.aspectj.internal.lang.annotation.ajcDeclareAnnotation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -98,7 +96,7 @@ public class AssociadoController {
     /*Metodo para listar o nome pela letra */
     @GetMapping("/api/nomeContem")
     public List<Associado> nomeContem(){
-        return acao.findByNomeContaining("e");
+        return acao.findByNomeContaining("é");
     }
 
     /*
