@@ -2,6 +2,7 @@ package br.com.ifms.projeto.gerenciamento.evento.crud.Associado;
 
 import java.util.List;
 
+import org.aspectj.internal.lang.annotation.ajcDeclareAnnotation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -86,6 +87,12 @@ public class AssociadoController {
     @GetMapping("/api/ordenarNomesDe")
     public List<Associado> ordenarNomesDesc(){
         return acao.findByOrderByNomeDesc();
+    }
+
+    /*Metodo que lista pelo nome e ordena pelo cpf */
+    @GetMapping("/api/ordenarNomes2")
+    public List<Associado> ordenarNomes2(){
+        return acao.findByNomeOrderByCpfDesc("Edigleis");
     }
 
     /*
