@@ -3,6 +3,7 @@ package br.com.ifms.projeto.gerenciamento.evento.crud.Repositories;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import br.com.ifms.projeto.gerenciamento.evento.crud.Associado.Associado;
@@ -51,9 +52,15 @@ public interface AssociadosRepositories extends JpaRepository<Associado, Long> {
     /*Esta função é parecida com o Link do banco de dados  */
     List<Associado> findByNomeContaining(String termo);
 
-    /*Todo os nomes que inicia com serão listados */
+    /*Todo os nomes que inicia com a primeira lera
+      com serão listados */
     List<Associado> findByNomeStartsWith(String termo);
 
-    /*Todos os nomes que finalizam com a letra a serão listados */
+    /*Todos os nomes que finalizam com a última letra,
+      serão listados */
     List<Associado> findByNomeEndsWith(String termo);
+
+    @Query(value = "SELECT SUM(dataNascimento) FROM associado", nativeQuery = true)
+    int somaNascimento();
+
 }

@@ -110,6 +110,11 @@ public class AssociadoController {
     public List<Associado> terminarCom(){
         return acao.findByNomeEndsWith("E");
     }
+    
+    @GetMapping("/api/somaDataNascimento")
+    public int somaNascimento(){
+        return acao.somaNascimento();
+    }    
 
     /*
      * Inicio dos Métodos
