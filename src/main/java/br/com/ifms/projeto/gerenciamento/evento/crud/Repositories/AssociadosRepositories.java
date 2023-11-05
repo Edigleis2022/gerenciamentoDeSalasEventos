@@ -60,7 +60,11 @@ public interface AssociadosRepositories extends JpaRepository<Associado, Long> {
       serão listados */
     List<Associado> findByNomeEndsWith(String termo);
 
-    @Query(value = "SELECT SUM(dataNascimento) FROM associado", nativeQuery = true)
-    int somaNascimento();
+    @Query(value = "SELECT SUM(idade) FROM associados", nativeQuery = true)
+    int somaIdades();
+
+    /* */
+    @Query(value = "SELECT * FROM associados WHERE idade >= :idade", nativeQuery = true)
+    List<Associado> idadeMaiorIgual(int idade);
 
 }

@@ -2,6 +2,8 @@ package br.com.ifms.projeto.gerenciamento.evento.crud.Associado;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -59,6 +61,10 @@ public class AssociadoController {
         return acao.save(obj);
     }
 
+    /*
+     * Método DELETE    
+     */
+
     @DeleteMapping("/api/{id}")
     public void remover(@PathVariable Long id){
         Associado obj = selecionarPeloId(id);
@@ -110,11 +116,28 @@ public class AssociadoController {
     public List<Associado> terminarCom(){
         return acao.findByNomeEndsWith("E");
     }
+
+    /**
+     * Método soma idade
+     * 
+     */
     
-    @GetMapping("/api/somaDataNascimento")
-    public int somaNascimento(){
-        return acao.somaNascimento();
-    }    
+    @GetMapping("/api/somaIdades")
+    public int somaIdades(){
+        return acao.somaIdades();
+    }   
+    
+    /*Métado para trazer um registro de 
+      associado com idade maior ou igual a 39 */
+    @GetMapping("/api/idadeMaiorIgual")
+    public List<Associado> idadeMaiorIgual(){
+        return acao.idadeMaiorIgual(39);
+    }
+
+    @GetMapping("/status")
+    public ResponseEntity<?> status(){
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
 
     /*
      * Inicio dos Métodos
