@@ -53,16 +53,16 @@ public class AssociadoController {
      * finByidEle pega pela caracteristica da classe
      */
     @GetMapping("/api/{id}")
-    public Associado selecionarPeloId(@PathVariable Long id){
-        return acao.findByid(id);
+    public ResponseEntity<?> selecionarPeloId(@PathVariable Long id){
+        return servico.selecionarPeloId(id);
     }
 
     /* Este metodo retorna um objeto editado.
      * Altera os resgistro. Equivale ao comando update do SQL
     */
     @PutMapping("/api")
-    public Associado editar(@RequestBody Associado obj){
-        return acao.save(obj);
+    public ResponseEntity<?> editar(@RequestBody Associado obj){
+        return servico.editar(obj);
     }
 
     /*
@@ -71,9 +71,9 @@ public class AssociadoController {
 
     @DeleteMapping("/api/{id}")
     public void remover(@PathVariable Long id){
-        Associado obj = selecionarPeloId(id);
+        //Associado obj = selecionarPeloId(id);
 
-        acao.delete(obj);
+        //acao.delete(obj);
     }
 
     /*
