@@ -60,6 +60,7 @@ public class AssociadoController {
     /* Este metodo retorna um objeto editado.
      * Altera os resgistro. Equivale ao comando update do SQL
     */
+    
     @PutMapping("/api")
     public ResponseEntity<?> editar(@RequestBody Associado obj){
         return servico.editar(obj);
