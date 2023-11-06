@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import br.com.ifms.projeto.gerenciamento.evento.crud.Repositories.AssociadosRepositories;
+import br.com.ifms.projeto.gerenciamento.evento.crud.servico.Servico;
 
 
 @RestController
@@ -29,19 +30,22 @@ public class AssociadoController {
     @Autowired
     private AssociadosRepositories acao;
 
+    @Autowired
+    private Servico servico;
+
     /*
      * O SAVE tem dua funções cadastrar ou editar
      * Efetuar um INSERT
      */
     @PostMapping("/api")//cadastra no banco de dados
-    public Associado cadastrar(@RequestBody Associado obj){
-        return acao.save(obj);
+    public ResponseEntity<?> cadastrar(@RequestBody Associado obj){
+        return servico.cadastrar(obj);
     }
 
     /*Este method lista os dados do Banco de Dados*/
     @GetMapping("/api")
-    public List<Associado> selecionar(){
-        return acao.findAll();
+    public ResponseEntity<?> selecionar(){
+        return servico.selecionar();
     }
 
     /* Este metodo filtra os dados do Banco de dados 

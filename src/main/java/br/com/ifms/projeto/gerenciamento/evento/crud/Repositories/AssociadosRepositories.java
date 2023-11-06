@@ -67,4 +67,6 @@ public interface AssociadosRepositories extends JpaRepository<Associado, Long> {
     @Query(value = "SELECT * FROM associados WHERE idade >= :idade", nativeQuery = true)
     List<Associado> idadeMaiorIgual(int idade);
 
+    int countById(Long id);
+
 }
