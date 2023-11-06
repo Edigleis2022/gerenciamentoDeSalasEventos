@@ -21,9 +21,12 @@ public class Servico {
   private Repositories acao;
   
   public ResponseEntity<?> cadastrar(Associado obj){
-
+      /*Método para imprimir uma mensagem caso o obj estiver vazio */
       if(obj.getNome().equals("")){
-        mensagem.setMensagem("O nome precisa ser preeenchido");
+          mensagem.setMensagem("O nome precisa ser preeenchido");
+          return new ResponseEntity<>(mensagem, HttpStatus.BAD_REQUEST);
+      }else if(obj.getIdade() < 44){
+          mensagem.setMensagem("Informe uma idade válida");
           return new ResponseEntity<>(mensagem, HttpStatus.BAD_REQUEST);
       }
 
