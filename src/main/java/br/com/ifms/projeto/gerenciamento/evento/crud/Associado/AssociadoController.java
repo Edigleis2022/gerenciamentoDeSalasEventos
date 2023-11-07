@@ -71,10 +71,8 @@ public class AssociadoController {
      */
 
     @DeleteMapping("/api/{id}")
-    public void remover(@PathVariable Long id){
-        //Associado obj = selecionarPeloId(id);
-
-        //acao.delete(obj);
+    public ResponseEntity<?> remover(@PathVariable Long id){
+        return servico.remover(id);
     }
 
     /*
