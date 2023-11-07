@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.ifms.projeto.gerenciamento.evento.crud.Repositories.AssociadosRepositories;
 import br.com.ifms.projeto.gerenciamento.evento.crud.servico.Servico;
+import jakarta.validation.Valid;
 
 
 @RestController
@@ -140,6 +141,11 @@ public class AssociadoController {
     @GetMapping("/status")
     public ResponseEntity<?> status(){
         return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @PostMapping("/cliente")
+    public void cliente(@Valid @RequestBody Cliente obj){
+        
     }
 
     /*
