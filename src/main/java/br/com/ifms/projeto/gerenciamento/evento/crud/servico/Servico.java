@@ -75,7 +75,7 @@ public class Servico {
         return new ResponseEntity<>(mensagem, HttpStatus.NOT_FOUND);
       }else{
 
-          Associado obj = acao.findByid(0);
+          Associado obj = acao.findByid(id);
           acao.delete(obj);
 
           mensagem.setMensagem("Associado removido com sucesso!!");
