@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import br.com.ifms.projeto.gerenciamento.evento.crud.DTO.Associado;
+import br.com.ifms.projeto.gerenciamento.evento.crud.dto.Associado;
 
 /**
  * Repositorio é a camada de persistência onde pode efetuar ações
