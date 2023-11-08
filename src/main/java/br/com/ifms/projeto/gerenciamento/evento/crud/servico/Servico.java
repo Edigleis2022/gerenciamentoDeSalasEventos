@@ -5,8 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import br.com.ifms.projeto.gerenciamento.evento.crud.Associado.Associado;
-import br.com.ifms.projeto.gerenciamento.evento.crud.Associado.Mensagem;
+import br.com.ifms.projeto.gerenciamento.evento.crud.DTO.Associado;
+import br.com.ifms.projeto.gerenciamento.evento.crud.DTO.Mensagem;
 import br.com.ifms.projeto.gerenciamento.evento.crud.Repositories.AssociadosRepositories;
 
 /*Aqui é o local onde ficaram 

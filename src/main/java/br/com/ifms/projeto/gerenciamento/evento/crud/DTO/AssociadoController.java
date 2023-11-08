@@ -1,4 +1,4 @@
-package br.com.ifms.projeto.gerenciamento.evento.crud.Associado;
+package br.com.ifms.projeto.gerenciamento.evento.crud.DTO;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
