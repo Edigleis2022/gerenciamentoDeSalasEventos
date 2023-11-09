@@ -4,10 +4,15 @@ package br.com.ifms.projeto.gerenciamento.evento.crud.entities;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import org.hibernate.annotations.ManyToAny;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -26,7 +31,7 @@ public class Associado implements Serializable{
     // O Id é responsavel pela criação da primary ky
     @Id
     //Essa annotecion 
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private Integer idade; 
@@ -36,6 +41,11 @@ public class Associado implements Serializable{
 	private String telefone;
 	private String endereco;
 
+    /*@ManyToAny(fecth = FetchType.EAGER)
+    @JoinTable(name = "tb_associado_role",
+                    joinColumns = @JoinColumn(name = "associado_id"),
+                    inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();*/
  /*public Associado(Long id, String nome, String CPF, LocalDate dataNascimento, String telefone, String email,
 			String endereco) {
 		this.id = id;
@@ -126,6 +136,21 @@ public class Associado implements Serializable{
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    @Override
+    public boolean equals(Object obj){
+            if (this == obj) {
+                return true;
+            }
+            if (obj == null) {
+                return false;
+            }
+            if (getClass() != obj.getClass()) {
+                return false;
+            }   
+            Associado other =(Associado) obj;
+            return Object.equals(id, other.id);
     }
 
 }

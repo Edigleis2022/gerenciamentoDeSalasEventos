@@ -6,8 +6,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import br.com.ifms.projeto.gerenciamento.evento.crud.Repositories.AssociadosRepositories;
-import br.com.ifms.projeto.gerenciamento.evento.crud.dto.Associado;
-import br.com.ifms.projeto.gerenciamento.evento.crud.dto.Mensagem;
+import br.com.ifms.projeto.gerenciamento.evento.crud.entities.Associado;
+import br.com.ifms.projeto.gerenciamento.evento.crud.entities.Mensagem;
+
 
 /*Aqui é o local onde ficaram 
   as regras de negócios do projeto*/
