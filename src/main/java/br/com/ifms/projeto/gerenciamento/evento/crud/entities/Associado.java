@@ -1,4 +1,4 @@
-package br.com.ifms.projeto.gerenciamento.evento.crud.dto;
+package br.com.ifms.projeto.gerenciamento.evento.crud.entities;
 
 
 import java.io.Serializable;
@@ -9,6 +9,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PastOrPresent;
 
 /*Primeira annotecion
  * Entity cria a tabela no bancos de dados
@@ -23,18 +26,14 @@ public class Associado implements Serializable{
     // O Id é responsavel pela criação da primary ky
     @Id
     //Essa annotecion 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private Integer idade; 
-    
-
-
     private String cpf;
     private LocalDate dataNascimento;
     private String quadraLote;
 	private String telefone;
-	private String email;
 	private String endereco;
 
  /*public Associado(Long id, String nome, String CPF, LocalDate dataNascimento, String telefone, String email,

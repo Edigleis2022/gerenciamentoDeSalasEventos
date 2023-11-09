@@ -1,4 +1,4 @@
-package br.com.ifms.projeto.gerenciamento.evento.crud.dto;
+package br.com.ifms.projeto.gerenciamento.evento.crud.entities;
 
 import org.springframework.stereotype.Component;
 
