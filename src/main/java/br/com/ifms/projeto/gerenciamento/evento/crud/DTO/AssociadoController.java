@@ -1,4 +1,4 @@
-package br.com.ifms.projeto.gerenciamento.evento.crud.Associado;
+package br.com.ifms.projeto.gerenciamento.evento.crud.dto;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import br.com.ifms.projeto.gerenciamento.evento.crud.Repositories.AssociadosRepositories;
-import br.com.ifms.projeto.gerenciamento.evento.crud.servico.Servico;
+import br.com.ifms.projeto.gerenciamento.evento.crud.services.Servico;
 import jakarta.validation.Valid;
 
 

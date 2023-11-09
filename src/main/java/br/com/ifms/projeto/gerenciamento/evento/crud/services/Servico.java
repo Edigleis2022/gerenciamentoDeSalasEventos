@@ -1,13 +1,13 @@
-package br.com.ifms.projeto.gerenciamento.evento.crud.servico;
+package br.com.ifms.projeto.gerenciamento.evento.crud.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import br.com.ifms.projeto.gerenciamento.evento.crud.Associado.Associado;
-import br.com.ifms.projeto.gerenciamento.evento.crud.Associado.Mensagem;
 import br.com.ifms.projeto.gerenciamento.evento.crud.Repositories.AssociadosRepositories;
+import br.com.ifms.projeto.gerenciamento.evento.crud.dto.Associado;
+import br.com.ifms.projeto.gerenciamento.evento.crud.dto.Mensagem;
 
 /*Aqui é o local onde ficaram 
   as regras de negócios do projeto*/
