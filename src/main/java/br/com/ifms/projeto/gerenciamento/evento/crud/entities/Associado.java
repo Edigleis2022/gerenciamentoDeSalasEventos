@@ -31,6 +31,7 @@ public class Associado implements Serializable{
     private LocalDate dataNascimento;
     private String quadraLote;
 	private String telefone;
+    private String email;
 	private String endereco;
 
     /*@ManyToAny(fecth = FetchType.EAGER)
@@ -111,14 +112,14 @@ public class Associado implements Serializable{
     }
 
 
-    /*public String getEmail() {
+    public String getEmail() {
         return email;
-    }*/
+    }
 
 
-    /*public void setEmail(String email) {
+    public void setEmail(String email) {
         this.email = email;
-    }*/
+    }
 
 
     public String getEndereco() {
