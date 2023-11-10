@@ -3,27 +3,19 @@ package br.com.ifms.projeto.gerenciamento.evento.crud.entities;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-
-import org.hibernate.annotations.ManyToAny;
-
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.PastOrPresent;
+
 
 /*Primeira annotecion
  * Entity cria a tabela no bancos de dados
  * 
  */
 @Entity
-@Table(name = "associados")
+@Table(name = "tb_associados")
 public class Associado implements Serializable{
     private static final long serialVersionUID = 1l;
 
@@ -119,14 +111,14 @@ public class Associado implements Serializable{
     }
 
 
-    public String getEmail() {
+    /*public String getEmail() {
         return email;
-    }
+    }*/
 
 
-    public void setEmail(String email) {
+    /*public void setEmail(String email) {
         this.email = email;
-    }
+    }*/
 
 
     public String getEndereco() {
@@ -138,6 +130,7 @@ public class Associado implements Serializable{
         this.endereco = endereco;
     }
 
+    /*
     @Override
     public boolean equals(Object obj){
             if (this == obj) {
@@ -151,6 +144,6 @@ public class Associado implements Serializable{
             }   
             Associado other =(Associado) obj;
             return Object.equals(id, other.id);
-    }
+    }*/
 
 }
