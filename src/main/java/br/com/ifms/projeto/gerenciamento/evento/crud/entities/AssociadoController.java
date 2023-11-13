@@ -143,11 +143,6 @@ public class AssociadoController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @PostMapping("/cliente")
-    public void cliente(@Valid @RequestBody Cliente obj){
-        
-    }
-
     /*
      * Inicio dos Métodos
      * 

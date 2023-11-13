@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
  * 
  */
 @Entity
-@Table(name = "tb_associados")
+@Table(name = "associados")
 public class Associado implements Serializable{
     private static final long serialVersionUID = 1l;
 
@@ -39,7 +39,12 @@ public class Associado implements Serializable{
                     joinColumns = @JoinColumn(name = "associado_id"),
                     inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();*/
- /*public Associado(Long id, String nome, String CPF, LocalDate dataNascimento, String telefone, String email,
+
+    public Associado(){
+        
+    }
+
+ public Associado(Long id, String nome, String CPF, LocalDate dataNascimento, String telefone, String email,
 			String endereco) {
 		this.id = id;
 		this.nome = nome;
@@ -48,7 +53,7 @@ public class Associado implements Serializable{
 		this.telefone = telefone;
 		this.email = email;
 		this.endereco = endereco;
-	}*/
+	}
 
 
     // Get e Set
@@ -131,7 +136,7 @@ public class Associado implements Serializable{
         this.endereco = endereco;
     }
 
-    /*
+    
     @Override
     public boolean equals(Object obj){
             if (this == obj) {
@@ -145,6 +150,6 @@ public class Associado implements Serializable{
             }   
             Associado other =(Associado) obj;
             return Object.equals(id, other.id);
-    }*/
+    }
 
 }
