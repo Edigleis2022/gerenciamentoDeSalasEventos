@@ -35,7 +35,7 @@ public class Associado implements Serializable{
     //Essa annotecion 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
+    private String name;
     private Integer idade; 
     private String cpf;
     private LocalDate dataNascimento;
@@ -46,7 +46,7 @@ public class Associado implements Serializable{
 
     @ManyToAny(fetch = FetchType.EAGER)
     @JoinTable(name = "tb_associado_role",
-                    joinColumns = JoinColumns(name = "associado_id"),
+                    joinColumns = @JoinColumn(name = "associado_id"),
                     inverseJoinColumns = JoinColumns(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
@@ -57,7 +57,7 @@ public class Associado implements Serializable{
  public Associado(Long id, String nome, String CPF, LocalDate dataNascimento, String telefone, String email,
 			String endereco) {
 		this.id = id;
-		this.nome = nome;
+		this.name = nome;
 		this.cpf = CPF;
 		this.dataNascimento = dataNascimento;
 		this.telefone = telefone;
@@ -84,11 +84,11 @@ public class Associado implements Serializable{
     }
 
     public String getNome() {
-        return nome;
+        return name;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.name = nome;
     }
 
     public Integer getIdade() {
