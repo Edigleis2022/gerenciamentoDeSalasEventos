@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import javax.persistence.JoinColumns;
+import jakarta.persistence.JoinColumn;
 
 import org.hibernate.annotations.ManyToAny;
 
@@ -47,7 +47,7 @@ public class Associado implements Serializable{
     @ManyToAny(fetch = FetchType.EAGER)
     @JoinTable(name = "tb_associado_role",
                     joinColumns = @JoinColumn(name = "associado_id"),
-                    inverseJoinColumns = JoinColumns(name = "role_id"))
+                    inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
     public Associado(){

@@ -44,6 +44,11 @@ public class Role implements Serializable {
         }
 
         @Override
+        public int hashCode(){
+            return Objects.hash(id);
+        }
+
+        @Override
         public boolean equals(Object obj){
             if (this == obj) {
                 return true;
