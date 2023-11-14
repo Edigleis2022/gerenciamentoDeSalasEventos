@@ -10,6 +10,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.PastOrPresent;
+import jakarta.validation.constraints.Size;
 
 public class AssociadoDTO implements Serializable {
     private static  final long serialVersionUID = 1L;
@@ -31,7 +32,7 @@ public class AssociadoDTO implements Serializable {
     
 
 
-    public AssociadoDTO{
+    public AssociadoDTO(){
         //TODO Auto-generated constructor stub
     }
 
