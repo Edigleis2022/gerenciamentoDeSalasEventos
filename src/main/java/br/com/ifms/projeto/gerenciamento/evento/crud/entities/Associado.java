@@ -3,10 +3,20 @@ package br.com.ifms.projeto.gerenciamento.evento.crud.entities;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
+
+import javax.persistence.JoinColumns;
+
+import org.hibernate.annotations.ManyToAny;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.Table;
 
 
@@ -34,11 +44,11 @@ public class Associado implements Serializable{
     private String email;
 	private String endereco;
 
-    /*@ManyToAny(fecth = FetchType.EAGER)
+    @ManyToAny(fetch = FetchType.EAGER)
     @JoinTable(name = "tb_associado_role",
-                    joinColumns = @JoinColumn(name = "associado_id"),
-                    inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Set<Role> roles = new HashSet<>();*/
+                    joinColumns = JoinColumns(name = "associado_id"),
+                    inverseJoinColumns = JoinColumns(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();
 
     public Associado(){
         
@@ -149,7 +159,7 @@ public class Associado implements Serializable{
                 return false;
             }   
             Associado other =(Associado) obj;
-            return Object.equals(id, other.id);
+            return Objects.equals(id, other.id);
     }
 
 }

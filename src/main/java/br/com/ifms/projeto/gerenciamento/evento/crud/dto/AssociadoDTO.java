@@ -1,7 +1,9 @@
 package br.com.ifms.projeto.gerenciamento.evento.crud.dto;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashSet;
+import java.util.Set;
 
 import br.com.ifms.projeto.gerenciamento.evento.crud.entities.Associado;
 import jakarta.validation.constraints.Email;
@@ -22,9 +24,11 @@ public class AssociadoDTO implements Serializable {
     private String telefone;
     @Email(message = "Entrar com um email válido")
     private String email;   
-    private String enderenco;
+    private String endereco;
 
     private Set<RoleDTO> roles = new HashSet<>();
+
+    
 
 
     public AssociadoDTO{
@@ -94,10 +98,10 @@ public class AssociadoDTO implements Serializable {
     }
 
     public String getEnderenco() {
-        return enderenco;
+        return endereco;
     }
     public void setEnderenco(String enderenco) {
-        this.enderenco = enderenco;
+        this.endereco = enderenco;
     }
 
     public Set<RoleDTO> getRoles(){
