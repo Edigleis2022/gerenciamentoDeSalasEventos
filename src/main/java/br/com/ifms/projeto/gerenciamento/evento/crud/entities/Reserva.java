@@ -1,4 +1,4 @@
-package br.com.ifms.projeto.gerenciamento.evento.crud.Reserva;
+package br.com.ifms.projeto.gerenciamento.evento.crud.entities;
 
 import java.util.Date;
 

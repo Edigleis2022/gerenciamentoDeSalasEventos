@@ -1,4 +1,4 @@
-package br.com.ifms.projeto.gerenciamento.evento.crud.Pagamento;
+package br.com.ifms.projeto.gerenciamento.evento.crud.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package br.com.ifms.projeto.gerenciamento.evento.crud.validar;
+package br.com.ifms.projeto.gerenciamento.evento.crud.validation;
 
 
  // Importar Map e HashMap
