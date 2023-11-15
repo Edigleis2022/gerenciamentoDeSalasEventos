@@ -54,10 +54,10 @@ public class Associado implements Serializable{
         
     }
 
- public Associado(Long id, String nome, String CPF, LocalDate dataNascimento, String telefone, String email,
+ public Associado(Long id, String name, String CPF, LocalDate dataNascimento, String telefone, String email,
 			String endereco) {
 		this.id = id;
-		this.name = nome;
+		this.name = name;
 		this.cpf = CPF;
 		this.dataNascimento = dataNascimento;
 		this.telefone = telefone;
@@ -87,8 +87,8 @@ public class Associado implements Serializable{
         return name;
     }
 
-    public void setNome(String nome) {
-        this.name = nome;
+    public void setNome(String name) {
+        this.name = name;
     }
 
     public Integer getIdade() {
