@@ -69,7 +69,7 @@ public class EspacoItem implements Serializable {
             return espaco;
         }
 
-        public void setEspaco(Espaco Espaco) {
+        public void setEspaco(Espaco espaco) {
             this.espaco = espaco;
         }
         
