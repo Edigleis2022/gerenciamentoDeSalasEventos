@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import br.com.ifms.projeto.gerenciamento.evento.crud.entities.Associado;
 
 @Repository
-public interface AssociadosRepositories extends JpaRepository<Associado, Long> {
+public interface AssociadosRepository extends JpaRepository<Associado, Long> {
 
         Associado findByEmail(String email);
 }

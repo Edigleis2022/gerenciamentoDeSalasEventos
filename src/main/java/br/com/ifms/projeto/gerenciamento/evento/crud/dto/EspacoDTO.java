@@ -2,9 +2,10 @@ package br.com.ifms.projeto.gerenciamento.evento.crud.dto;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
-import org.hibernate.mapping.List;
+
 
 import br.com.ifms.projeto.gerenciamento.evento.crud.entities.Espaco;
 import br.com.ifms.projeto.gerenciamento.evento.crud.entities.EspacoItem;
@@ -18,7 +19,7 @@ public class EspacoDTO implements Serializable {
         private String quiosque;
         private String quadraEsportiva;
 
-        private List<EspacoItem> espacoItem = new  ArrayList<>();
+        private List<EspacoItem> espacosItem = new ArrayList<>();
 
         public EspacoDTO(){
             //TODO Auto-generated constructor stub
@@ -39,14 +40,14 @@ public class EspacoDTO implements Serializable {
                 this.quadraEsportiva = entity.getQuadraEsportiva();
         }
 
-        public EspacoDTO(Espaco entity, List<EspacoItem> espacoItem){
+        public EspacoDTO(Espaco entity, List<EspacoItem> espacosItem){
                 this(entity);
-                this.espacoItem = espacosItem.stream().map(x -> new EspacosItem(
+                this.espacosItem = espacosItem.stream().map(x -> new EspacoItem(
                                 x.getId(), x.getNumeroSerie(), x.getSituacao()))
                                 .collect(Collectors.toList());
         }
 
-        publiv List<EspacoItem> getEspacosItem(){
+        public List<EspacoItem> getEspacosItem(){
             return espacosItem;
         }
 
