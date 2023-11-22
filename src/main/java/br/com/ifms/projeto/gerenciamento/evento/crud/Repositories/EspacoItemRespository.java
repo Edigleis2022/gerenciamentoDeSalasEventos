@@ -22,7 +22,6 @@ public interface EspacoItemRespository extends JpaRepository<EspacoItem, Long> {
         //Query - Consultas customizzads =========================
     
         //SELECT numero_serie FROM tb_espaco_item WHERE situacao = 'DISPONIVEL'
-        @Query("SELECT new br.com.ifms.projetoo.gerenciamento.evento.crud.("
-                        + "obj.numeroSerie, obj.espaco.)")
+        
     
 }
